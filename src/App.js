@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+import { Button } from '@material-ui/core';
 import './App.css';
+import Header from './components/NavBar';
+import {regTitile} from './components/assets/MyAppUtils.js'
+import DisplayForm from './components/Registration';
 
 function App() {
+  //const textHome = <h1>Hello, Test User</h1>
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <>{regTitile}</>
+      <div>
+        <DisplayForm></DisplayForm>
+      </div>
     </div>
   );
 }
